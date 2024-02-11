@@ -1,0 +1,10 @@
+﻿services:
+  database:
+    container_name: wavydaves-postgres
+    image: postgres
+    environment:
+      - POSTGRES_PASSWORD=asdf
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./Database:/var/lib/postgresql/data

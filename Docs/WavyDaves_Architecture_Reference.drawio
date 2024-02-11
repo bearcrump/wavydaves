@@ -1,0 +1,82 @@
+<mxfile host="app.diagrams.net" modified="2024-02-11T22:31:33.658Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0" etag="42LFN0A7COAbdnLGhmdi" version="23.1.2" type="device">
+  <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
+    <mxGraphModel dx="1434" dy="907" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="w8fvCIK_jBGHkswydM18-1" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="60" width="220" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="w8fvCIK_jBGHkswydM18-2" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Docker Container&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="87.5" y="80" width="165" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="w8fvCIK_jBGHkswydM18-3" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/databases/Azure_Database_PostgreSQL_Server.svg;" vertex="1" parent="1">
+          <mxGeometry x="146" y="130" width="48" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="w8fvCIK_jBGHkswydM18-5" value="&lt;div&gt;Database: WavyDaves&lt;/div&gt;&lt;div&gt;User: postgres&lt;/div&gt;&lt;div&gt;Pass: asdf&lt;/div&gt;&lt;div&gt;Port: 5432&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="92" y="194" width="156" height="106" as="geometry" />
+        </mxCell>
+        <mxCell id="w8fvCIK_jBGHkswydM18-6" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="285" y="360" width="545" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="w8fvCIK_jBGHkswydM18-8" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="400" width="206" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="w8fvCIK_jBGHkswydM18-10" value="&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;font style=&quot;font-size: 26px;&quot;&gt;&lt;b&gt;Data Layer&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="20" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="w8fvCIK_jBGHkswydM18-11" value="&lt;font style=&quot;font-size: 31px;&quot;&gt;&lt;b&gt;&lt;u&gt;WavyDaves&lt;/u&gt;&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="330" y="10" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="w8fvCIK_jBGHkswydM18-15" value="&lt;font style=&quot;font-size: 26px;&quot;&gt;&lt;b&gt;Service &amp;amp; Presentation Layer&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="302.5" y="320" width="510" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="w8fvCIK_jBGHkswydM18-17" value="" style="image;html=1;image=img/lib/clip_art/computers/Server_Tower_128x128.png" vertex="1" parent="1">
+          <mxGeometry x="324" y="540" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="w8fvCIK_jBGHkswydM18-18" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="400" width="206" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="w8fvCIK_jBGHkswydM18-20" value="WavyDaves.Client" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="633" y="620" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="w8fvCIK_jBGHkswydM18-23" value="WavyDaves.API" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="353" y="620" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="w8fvCIK_jBGHkswydM18-24" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/app_services/App_Service_Domains.svg;" vertex="1" parent="1">
+          <mxGeometry x="610" y="560" width="49.45" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="w8fvCIK_jBGHkswydM18-26" value="&lt;div&gt;Language - Java&lt;/div&gt;&lt;div&gt;Framework - SpringBoot&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="330" y="420" width="150" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="w8fvCIK_jBGHkswydM18-27" value="&lt;div&gt;Languages - HTML, CSS, Javascript&lt;/div&gt;&lt;div&gt;Framework -&amp;nbsp; Vue.js&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="628" y="420" width="150" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="w8fvCIK_jBGHkswydM18-29" value="&lt;div&gt;HTTP Requests&lt;/div&gt;&lt;div&gt;-&lt;/div&gt;&lt;div&gt;JSON&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="525" y="420" width="60" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="w8fvCIK_jBGHkswydM18-32" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;Data From DB&lt;br&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="140" y="535" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="w8fvCIK_jBGHkswydM18-33" value="&lt;div&gt;Spring Data JPA Library (part of Springboot Framework) &lt;br&gt;&lt;/div&gt;&lt;div&gt;-&lt;/div&gt;&lt;div&gt;SQL Queries&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="26" y="380" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="w8fvCIK_jBGHkswydM18-38" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.455;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="147.0099999999999" y="320" as="sourcePoint" />
+            <mxPoint x="300" y="520" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="146.91" y="520" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="w8fvCIK_jBGHkswydM18-39" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.619;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="w8fvCIK_jBGHkswydM18-18">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="516" y="530" as="sourcePoint" />
+            <mxPoint x="566" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
