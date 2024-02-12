@@ -3,7 +3,9 @@
     container_name: wavydaves-postgres
     image: postgres
     environment:
+      - POSTGRES_USER=WavyDaves
       - POSTGRES_PASSWORD=asdf
+      - POSTGRES_DB=WavyDaves
     ports:
       - "5432:5432"
     volumes:
