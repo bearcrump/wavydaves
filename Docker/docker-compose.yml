@@ -2,6 +2,7 @@
   database:
     container_name: wavydaves-postgres
     image: postgres
+    user: 1000:1000
     environment:
       - POSTGRES_USER=WavyDaves
       - POSTGRES_PASSWORD=asdf
