@@ -1,4 +1,4 @@
-﻿services:
+services:
   database:
     container_name: wavydaves-postgres
     image: postgres
@@ -6,8 +6,11 @@
       - POSTGRES_USER=WavyDaves
       - POSTGRES_PASSWORD=asdf
       - POSTGRES_DB=WavyDaves
-      - PGDATA=/var/lib/postgresql/data/pgdata
     ports:
       - "5432:5432"
     volumes:
-      - ./Database:/var/lib/postgresql/data
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
+
