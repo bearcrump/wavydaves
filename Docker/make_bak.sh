@@ -13,3 +13,10 @@ docker exec wavydaves-postgres pg_dump -U WavyDaves -d WavyDaves -f "${backup_fi
 docker cp wavydaves-postgres:"${backup_file}" "$(dirname "$(realpath "$0")")/Backups/${backup_file}"
 
 echo "Backup completed: ${backup_file}"
+echo "Cleaning backups from container..."
+
+# Remove .bak files from container image
+docker exec -it wavydaves-postgres bash
+rm -rf *.bak
+
+echo "Done"
