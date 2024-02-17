@@ -16,7 +16,7 @@ echo "Backup completed: ${backup_file}"
 echo "Cleaning backups from container..."
 
 # Remove .bak files from container image
-docker exec -it wavydaves-postgres bash
-rm -rf *.bak
+docker exec -it wavydaves-postgres rm -f /*.bak
 
+#Print done message
 echo "Done"
