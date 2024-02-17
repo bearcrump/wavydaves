@@ -1,0 +1,10 @@
+/home/debian/Dev/WavyDaves/WavyDaves.Api/src/main/java/com/WavyDaves/Api/models/User.java
+/home/debian/Dev/WavyDaves/WavyDaves.Api/src/main/java/com/WavyDaves/Api/models/Address.java
+/home/debian/Dev/WavyDaves/WavyDaves.Api/src/main/java/com/WavyDaves/Api/models/OrderItem.java
+/home/debian/Dev/WavyDaves/WavyDaves.Api/src/main/java/com/WavyDaves/Api/Application.java
+/home/debian/Dev/WavyDaves/WavyDaves.Api/src/main/java/com/WavyDaves/Api/models/CreditCard.java
+/home/debian/Dev/WavyDaves/WavyDaves.Api/src/main/java/com/WavyDaves/Api/services/UserService.java
+/home/debian/Dev/WavyDaves/WavyDaves.Api/src/main/java/com/WavyDaves/Api/models/Order.java
+/home/debian/Dev/WavyDaves/WavyDaves.Api/src/main/java/com/WavyDaves/Api/controllers/UsersController.java
+/home/debian/Dev/WavyDaves/WavyDaves.Api/src/main/java/com/WavyDaves/Api/models/Item.java
+/home/debian/Dev/WavyDaves/WavyDaves.Api/src/main/java/com/WavyDaves/Api/interfaces/IUserService.java

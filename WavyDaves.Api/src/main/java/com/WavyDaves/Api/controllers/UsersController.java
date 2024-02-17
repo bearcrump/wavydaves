@@ -9,12 +9,11 @@ import java.util.ArrayList;
 @RestController
 @RequestMapping("api/v1/users")
 public class UsersController {
-    @Autowired
     private IUserService userService;
     private ArrayList<User> fakeUsers = new ArrayList<User>();
-
-    UsersController(IUserService userService) {
-        this.userService = userService;
+    
+    UsersController() {
+        //this.userService = userService;
         addUsers();
     }
 
@@ -39,5 +38,20 @@ public class UsersController {
             }
         }
         return null;
+    }
+
+    @PostMapping
+    public void postUser() {
+        throw new RuntimeException("Method not Implemented");
+    }
+
+    @PutMapping
+    public void putUser() {
+        throw new RuntimeException("Method not implemented");
+    }
+
+    @DeleteMapping
+    public void deleteUserById() {
+        throw new RuntimeException("Method not Implemented");
     }
 }
