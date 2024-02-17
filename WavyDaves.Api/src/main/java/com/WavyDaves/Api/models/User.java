@@ -1,4 +1,4 @@
-package com.WavyDaves.Api.Models;
+package com.WavyDaves.Api.models;
 
 import org.springframework.lang.Nullable;
 
@@ -16,14 +16,14 @@ public class User {
     private String phoneNumber;
     private Boolean isAdmin;
 
-    public User(String firstName, String lastName, String email, String password, Boolean isAdmin) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.password = password;
-        this.isAdmin = isAdmin;
+    public User() {
+
     }
-    public User(String firstName, String lastName, String email, String password, String phoneNumber, Boolean isAdmin) {
+    public User(Integer id, Integer creditCardId, Integer addressId, String firstName, String lastName,
+                String email, String password, String phoneNumber, Boolean isAdmin) {
+        this.id = id;
+        this.creditCardId = creditCardId;
+        this.addressId = addressId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -32,79 +32,87 @@ public class User {
         this.isAdmin = isAdmin;
     }
 
-    public Integer getId() {
+    public Integer id() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public User setId(Integer id) {
         this.id = id;
+        return this;
     }
 
     @Nullable
-    public Integer getCreditCardId() {
+    public Integer creditCardId() {
         return creditCardId;
     }
 
-    public void setCreditCardId(@Nullable Integer creditCardId) {
+    public User setCreditCardId(@Nullable Integer creditCardId) {
         this.creditCardId = creditCardId;
+        return this;
     }
 
     @Nullable
-    public Integer getAddressId() {
+    public Integer addressId() {
         return addressId;
     }
 
-    public void setAddressId(@Nullable Integer addressId) {
+    public User setAddressId(@Nullable Integer addressId) {
         this.addressId = addressId;
+        return this;
     }
 
-    public String getFirstName() {
+    public String firstName() {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
+    public User setFirstName(String firstName) {
         this.firstName = firstName;
+        return this;
     }
 
-    public String getLastName() {
+    public String lastName() {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
+    public User setLastName(String lastName) {
         this.lastName = lastName;
+        return this;
     }
 
-    public String getEmail() {
+    public String email() {
         return email;
     }
 
-    public void setEmail(String email) {
+    public User setEmail(String email) {
         this.email = email;
+        return this;
     }
 
-    public String getPassword() {
+    public String password() {
         return password;
     }
 
-    public void setPassword(String password) {
+    public User setPassword(String password) {
         this.password = password;
+        return this;
     }
 
     @Nullable
-    public String getPhoneNumber() {
+    public String phoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(@Nullable String phoneNumber) {
+    public User setPhoneNumber(@Nullable String phoneNumber) {
         this.phoneNumber = phoneNumber;
+        return this;
     }
 
-    public Boolean getAdmin() {
+    public Boolean isAdmin() {
         return isAdmin;
     }
 
-    public void setAdmin(Boolean admin) {
+    public User setAdmin(Boolean admin) {
         isAdmin = admin;
+        return this;
     }
-
 }
