@@ -4,15 +4,12 @@ import org.springframework.lang.Nullable;
 
 public class User {
     private Integer id;
-    @Nullable
     private Integer creditCardId;
-    @Nullable
     private Integer addressId;
     private String firstName;
     private String lastName;
     private String email;
     private String password;
-    @Nullable
     private String phoneNumber;
     private Boolean isAdmin;
 
@@ -111,8 +108,8 @@ public class User {
         return isAdmin;
     }
 
-    public User setAdmin(Boolean admin) {
-        isAdmin = admin;
+    public User setAdmin(Boolean isAdmin) {
+        this.isAdmin = isAdmin;
         return this;
     }
 }
