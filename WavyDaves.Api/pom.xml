@@ -8,10 +8,10 @@
 		<version>3.2.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.WavyDaves</groupId>
-	<artifactId>WavyDaves.Api</artifactId>
+	<groupId>com.wavydaves</groupId>
+	<artifactId>wavydaves.api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>WavyDaves.Api</name>
+	<name>wavydaves.api</name>
 	<description>A RESTful api built using spring boot framework for a fictional pizza restaurant</description>
 	<properties>
 		<java.version>17</java.version>

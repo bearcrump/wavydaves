@@ -5,8 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8e5d98d-3b14-4575-989c-7c93fd5c804f" name="Changes" comment="/">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/WavyDaves/Api/controllers/ItemsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/WavyDaves/Api/controllers/ItemsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/WavyDaves/Api/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wavydaves/api/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/WavyDaves/Api/controllers/ItemsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wavydaves/api/controllers/ItemsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/WavyDaves/Api/controllers/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wavydaves/api/controllers/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/WavyDaves/Api/interfaces/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wavydaves/api/interfaces/IUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/WavyDaves/Api/models/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wavydaves/api/models/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/WavyDaves/Api/models/CreditCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wavydaves/api/models/CreditCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/WavyDaves/Api/models/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wavydaves/api/models/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/WavyDaves/Api/models/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wavydaves/api/models/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/WavyDaves/Api/models/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wavydaves/api/models/OrderItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/WavyDaves/Api/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wavydaves/api/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/WavyDaves/Api/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wavydaves/api/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/WavyDaves/Api/ApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/wavydaves/api/ApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/WavyDaves/Api/Application.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/WavyDaves/Api/controllers/UsersController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/WavyDaves/Api/interfaces/IUserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/WavyDaves/Api/models/Address.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/WavyDaves/Api/models/CreditCard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/WavyDaves/Api/models/Item.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/WavyDaves/Api/models/Order.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/WavyDaves/Api/models/OrderItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/WavyDaves/Api/models/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/WavyDaves/Api/services/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/WavyDaves/Api/ApplicationTests.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,15 +84,15 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+    "settings.editor.selected.configurable": "editor.preferences.tabs"
   }
 }]]></component>
   <component name="RunManager">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="BUNDLED" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.WavyDaves.Api.Application" />
-      <module name="WavyDaves.Api" />
+      <option name="MAIN_CLASS_NAME" value="com.wavydaves.api.Application" />
+      <module name="wavydaves.api" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.WavyDaves.Api.*" />
@@ -99,5 +127,16 @@
       <updated>1707877722821</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
