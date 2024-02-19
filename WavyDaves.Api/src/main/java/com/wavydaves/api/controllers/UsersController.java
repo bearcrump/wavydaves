@@ -6,13 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 @RequestMapping("api/v1/users")
 public class UsersController {
     private final IUserService userService;
-    private ArrayList<User> fakeUsers = new ArrayList<User>();
 
     @Autowired
     UsersController(IUserService userService) {
@@ -20,33 +19,38 @@ public class UsersController {
     }
 
     @GetMapping
-    public ResponseEntity<ArrayList<User>> getAllUsers() {
-        return ResponseEntity.ok(fakeUsers);
+    public ResponseEntity<List<User>> getAllUsers() {
+        return ResponseEntity.ok(userService.getAllUsers());
     }
 
-    @GetMapping("/byFirstName")
+    @GetMapping
+    public ResponseEntity<User> getByUserId(Integer userId) {
+        return ResponseEntity.ok(userService.getById(userId));
+    }
+
+    @GetMapping("/FirstName")
     public User getUserByFirstName(@RequestParam String firstname) {
-        for (User user : fakeUsers ) {
-            if (user.getFirstName().equals(firstname)) {
-                return user;
-            }
-        }
-        return null;
+        return userService.getUserByFirstName(firstname);
+    }
+
+    @GetMapping("/LastName")
+    public User getUserByLastName(@RequestParam String lastName) {
+        return userService.getUserByLastName(lastName);
     }
 
     @PostMapping
-    public void postUser() {
-        throw new RuntimeException("Method not Implemented");
+    public void postUser(User user) {
+        userService.postUser(user);
     }
 
     @PutMapping
-    public void putUser() {
-        throw new RuntimeException("Method not implemented");
+    public void putUser(User user) {
+        userService.updateUser(user);
     }
 
     @DeleteMapping
-    public void deleteUserById() {
-        throw new RuntimeException("Method not Implemented");
+    public void deleteUserById(Integer userId) {
+        userService.deleteUser(userId);
     }
 
     @ExceptionHandler(Exception.class)

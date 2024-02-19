@@ -4,6 +4,7 @@ import com.wavydaves.api.interfaces.IUserService;
 import com.wavydaves.api.models.User;
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class UserService implements IUserService {
@@ -21,6 +22,10 @@ public class UserService implements IUserService {
     }
 
     public ArrayList<User> getUsers() {
+        return fakeUsers;
+    }
+
+    public List<User> getAllUsers() {
         return fakeUsers;
     }
 
@@ -72,6 +77,18 @@ public class UserService implements IUserService {
         return null;
     }
 
+    public User getUserByPhoneNumber(String phoneNumber) {
+        for (User user : fakeUsers) {
+            if (user.getPhoneNumber().equals(phoneNumber)) {
+                return user;
+            }
+            else {
+                System.out.println("No users with phone number " + phoneNumber + "found.");
+            }
+        }
+        return null;
+    }
+
     public ArrayList<User> getAdminUsers() {
 
         ArrayList<User> admins = new ArrayList<User>();
@@ -101,9 +118,9 @@ public class UserService implements IUserService {
         System.out.println("Matching user could not be found - no users updated");
     }
 
-    public void deleteUser(User userToDelete) {
+    public void deleteUser(Integer userId) {
         for (User user : fakeUsers) {
-            if (userToDelete.equals(user)) {
+            if (userId.equals(user.getId())) {
                 fakeUsers.remove(user);
                 return;
             }
