@@ -15,7 +15,7 @@ import java.util.Arrays;
 @RequestMapping("api/v1/items")
 public class ItemsController {
 
-    private IItemService itemService;
+    private final IItemService itemService;
     private  ArrayList<Item> fakeItems = new ArrayList<Item>();
 
     @Autowired

@@ -3,6 +3,7 @@ package com.wavydaves.api.controllers;
 import com.wavydaves.api.interfaces.IUserService;
 import com.wavydaves.api.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
@@ -17,13 +18,6 @@ public class UsersController {
     UsersController(IUserService userService) {
         this.userService = userService;
         addUsers();
-    }
-
-    public void addUsers () {
-        User dirf = new User(null, null,null,"Dirf","McDoogenhauser", "itzDirfOrNuthin@dmail.net", "dirfedyermom", "689-6969", null);
-        User doot = new User(null,null,null,"Doot", "Doot", "doot@doot.doot", "doot", "979-9797",false);
-        this.fakeUsers.add(dirf);
-        this.fakeUsers.add(doot);
     }
 
     @GetMapping
@@ -54,5 +48,10 @@ public class UsersController {
     @DeleteMapping
     public void deleteUserById() {
         throw new RuntimeException("Method not Implemented");
+    }
+
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<String> handleException(Exception e) {
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("An error occurred: " + e.getMessage());
     }
 }
