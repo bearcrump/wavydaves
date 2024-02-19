@@ -17,7 +17,6 @@ public class UsersController {
     @Autowired
     UsersController(IUserService userService) {
         this.userService = userService;
-        addUsers();
     }
 
     @GetMapping
