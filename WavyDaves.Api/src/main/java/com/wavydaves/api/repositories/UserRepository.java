@@ -4,7 +4,7 @@ import com.wavydaves.api.models.User;
 import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 
-@Repository
+//@Repository
 public class UserRepository {
 
     public UserRepository() {}

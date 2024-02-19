@@ -6,10 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.io.PrintStream;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 @RestController
 @RequestMapping("api/v1/items")

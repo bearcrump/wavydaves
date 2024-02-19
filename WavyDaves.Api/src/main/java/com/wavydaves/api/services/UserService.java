@@ -8,7 +8,7 @@ import java.util.ArrayList;
 @Service
 public class UserService implements IUserService {
 
-    private ArrayList<User> fakeUsers;
+    private ArrayList<User> fakeUsers = new ArrayList<User>();
     public UserService() {
         addUsers();
     }
@@ -16,8 +16,8 @@ public class UserService implements IUserService {
     public void addUsers () {
         User dirf = new User(null, null,null,"Dirf","McDoogenhauser", "itzDirfOrNuthin@dmail.net", "dirfedyermom", "689-6969", null);
         User doot = new User(null,null,null,"Doot", "Doot", "doot@doot.doot", "doot", "979-9797",false);
-        this.fakeUsers.add(dirf);
-        this.fakeUsers.add(doot);
+        fakeUsers.add(dirf);
+        fakeUsers.add(doot);
     }
 
     public ArrayList<User> getUsers() {
