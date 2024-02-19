@@ -34,86 +34,77 @@ public class Order {
         this.isDelivery = isDelivery;
     }
 
-    public Integer id() {
+    public Integer getId() {
         return id;
     }
 
-    public Order setId(Integer id) {
+    public void setId(Integer id) {
         this.id = id;
-        return this;
     }
 
     @Nullable
-    public Integer userId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public Order setUserId(@Nullable Integer userId) {
+    public void setUserId(@Nullable Integer userId) {
         this.userId = userId;
-        return this;
     }
 
     @Nullable
-    public Integer addressId() {
+    public Integer getAddressId() {
         return addressId;
     }
 
-    public Order setAddressId(@Nullable Integer addressId) {
+    public void setAddressId(@Nullable Integer addressId) {
         this.addressId = addressId;
-        return this;
     }
 
-    public String paymentType() {
+    public String getPaymentType() {
         return paymentType;
     }
 
-    public Order setPaymentType(String paymentType) {
+    public void setPaymentType(String paymentType) {
         this.paymentType = paymentType;
-        return this;
     }
 
-    public String name() {
+    public String getName() {
         return name;
     }
 
-    public Order setName(String name) {
+    public void setName(String name) {
         this.name = name;
-        return this;
     }
 
-    public ZonedDateTime orderDate() {
+    public ZonedDateTime getOrderDate() {
         return orderDate;
     }
 
-    public Order setOrderDate(ZonedDateTime orderDate) {
+    public void setOrderDate(ZonedDateTime orderDate) {
         this.orderDate = orderDate;
-        return this;
     }
 
-    public Integer totalDollars() {
+    public Integer getTotalDollars() {
         return totalDollars;
     }
 
-    public Order setTotalDollars(Integer totalDollars) {
+    public void setTotalDollars(Integer totalDollars) {
         this.totalDollars = totalDollars;
-        return this;
     }
 
-    public Integer totalCents() {
+    public Integer getTotalCents() {
         return totalCents;
     }
 
-    public Order setTotalCents(Integer totalCents) {
+    public void setTotalCents(Integer totalCents) {
         this.totalCents = totalCents;
-        return this;
     }
 
-    public Boolean isDelivery() {
+    public Boolean getDelivery() {
         return isDelivery;
     }
 
-    public Order setDelivery(Boolean delivery) {
+    public void setDelivery(Boolean delivery) {
         isDelivery = delivery;
-        return this;
     }
 }

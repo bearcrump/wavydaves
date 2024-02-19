@@ -18,39 +18,35 @@ public class OrderItem {
         this.quantity = quantity;
     }
 
-    public Integer id() {
+    public Integer getId() {
         return id;
     }
 
-    public OrderItem setId(Integer id) {
+    public void setId(Integer id) {
         this.id = id;
-        return this;
     }
 
-    public Integer orderId() {
+    public Integer getOrderId() {
         return orderId;
     }
 
-    public OrderItem setOrderId(Integer orderId) {
+    public void setOrderId(Integer orderId) {
         this.orderId = orderId;
-        return this;
     }
 
-    public Integer itemId() {
+    public Integer getItemId() {
         return itemId;
     }
 
-    public OrderItem setItemId(Integer itemId) {
+    public void setItemId(Integer itemId) {
         this.itemId = itemId;
-        return this;
     }
 
-    public Integer quantity() {
+    public Integer getQuantity() {
         return quantity;
     }
 
-    public OrderItem setQuantity(Integer quantity) {
+    public void setQuantity(Integer quantity) {
         this.quantity = quantity;
-        return this;
     }
 }

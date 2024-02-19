@@ -25,59 +25,53 @@ public class CreditCard {
         this.expirationDate = expirationDate;
     }
 
-    public Integer id() {
+    public Integer getId() {
         return id;
     }
 
-    public CreditCard setId(Integer id) {
+    public void setId(Integer id) {
         this.id = id;
-        return this;
     }
 
-    public Integer addressId() {
+    public Integer getAddressId() {
         return addressId;
     }
 
-    public CreditCard setAddressId(Integer addressId) {
+    public void setAddressId(Integer addressId) {
         this.addressId = addressId;
-        return this;
     }
 
     @Nullable
-    public Integer userId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public CreditCard setUserId(@Nullable Integer userId) {
+    public void setUserId(@Nullable Integer userId) {
         this.userId = userId;
-        return this;
     }
 
-    public Integer cardNumber() {
+    public Integer getCardNumber() {
         return cardNumber;
     }
 
-    public CreditCard setCardNumber(Integer cardNumber) {
+    public void setCardNumber(Integer cardNumber) {
         this.cardNumber = cardNumber;
-        return this;
     }
 
-    public String name() {
+    public String getName() {
         return name;
     }
 
-    public CreditCard setName(String name) {
+    public void setName(String name) {
         this.name = name;
-        return this;
     }
 
-    public ZonedDateTime expirationDate() {
+    public ZonedDateTime getExpirationDate() {
         return expirationDate;
     }
 
-    public CreditCard setExpirationDate(ZonedDateTime expirationDate) {
+    public void setExpirationDate(ZonedDateTime expirationDate) {
         this.expirationDate = expirationDate;
-        return this;
     }
 }
 

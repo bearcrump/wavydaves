@@ -24,73 +24,61 @@ public class Address {
         this.line2 = line2;
         this.zip = zip;
     }
-    public Integer id() {
+
+    public Integer getId() {
         return id;
     }
 
-    public Address setId(Integer id) {
+    public void setId(Integer id) {
         this.id = id;
-        return this;
     }
 
-    public String country() {
-
+    public String getCountry() {
         return country;
     }
 
-    public Address setCountry(String country) {
+    public void setCountry(String country) {
         this.country = country;
-        return this;
     }
 
-    public String state() {
-
+    public String getState() {
         return state;
     }
 
-    public Address setState(String state) {
+    public void setState(String state) {
         this.state = state;
-        return this;
     }
 
-    public String city() {
-
+    public String getCity() {
         return city;
     }
 
-    public Address setCity(String city) {
+    public void setCity(String city) {
         this.city = city;
-        return this;
     }
 
-    public String line1() {
-
+    public String getLine1() {
         return line1;
     }
 
-    public Address setLine1(String line1) {
+    public void setLine1(String line1) {
         this.line1 = line1;
-        return this;
     }
 
     @Nullable
-    public String line2() {
-
+    public String getLine2() {
         return line2;
     }
 
-    public Address setLine2(@Nullable String line2) {
+    public void setLine2(@Nullable String line2) {
         this.line2 = line2;
-        return this;
     }
 
-    public Integer zip() {
-
+    public Integer getZip() {
         return zip;
     }
 
-    public Address setZip(Integer zip) {
+    public void setZip(Integer zip) {
         this.zip = zip;
-        return this;
     }
 }
