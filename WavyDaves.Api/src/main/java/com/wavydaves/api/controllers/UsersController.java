@@ -23,14 +23,14 @@ public class UsersController {
         return ResponseEntity.ok(userService.getAllUsers());
     }
 
-    @GetMapping
+    @GetMapping("/byId")
     public ResponseEntity<User> getByUserId(Integer userId) {
         return ResponseEntity.ok(userService.getById(userId));
     }
 
     @GetMapping("/FirstName")
-    public User getUserByFirstName(@RequestParam String firstname) {
-        return userService.getUserByFirstName(firstname);
+    public User getUserByFirstName(@RequestParam String firstName) {
+        return userService.getUserByFirstName(firstName);
     }
 
     @GetMapping("/LastName")

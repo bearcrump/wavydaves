@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8e5d98d-3b14-4575-989c-7c93fd5c804f" name="Changes" comment="/">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wavydaves/api/controllers/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wavydaves/api/controllers/UsersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wavydaves/api/interfaces/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wavydaves/api/interfaces/IUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wavydaves/api/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wavydaves/api/services/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +64,7 @@
       <option name="ALTERNATIVE_JRE_PATH" value="BUNDLED" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.wavydaves.api.Application" />
-      <module name="wavydaves.api" />
+      <module name="WavyDaves.Api" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.WavyDaves.Api.*" />
