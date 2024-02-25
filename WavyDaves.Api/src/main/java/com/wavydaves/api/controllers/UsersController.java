@@ -38,11 +38,26 @@ public class UsersController {
         return ResponseEntity.ok(userService.getUsersByLastName(lastName));
     }
 
+    @GetMapping("/email")
+    public ResponseEntity<User> getUserByEmail(@RequestParam String email) {
+        return ResponseEntity.ok(userService.getUserByEmail(email));
+    }
+
+    @GetMapping("/phone_number")
+    public ResponseEntity<List<User>> getUsersByPhoneNumber(@RequestParam String phoneNumber) {
+        return ResponseEntity.ok(userService.getUsersByPhoneNumber(phoneNumber));
+    }
+    
+    @GetMapping("/admins")
+    public ResponseEntity<List<User>> getAdminUsers() {
+        return ResponseEntity.ok(userService.getAdminUsers());
+    }
+
     @PostMapping
     public ResponseEntity<User> postUser(@RequestBody User user) {
         return ResponseEntity.ok(userService.upsertUser(user));
     }
-
+    
     @PutMapping
     public ResponseEntity<User> putUser(@RequestBody User user) {
         return ResponseEntity.ok(userService.upsertUser(user));

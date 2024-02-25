@@ -29,9 +29,9 @@ public interface UserRepository extends JpaRepository<User, Integer> {
     @Query("SELECT u FROM User u where u.phoneNumber = ?1")
     Optional<List<User>> getUsersByPhoneNumber(String phoneNumber);
 
-    @Query("SELECT u FROM User u where u.isadmin = true")
-    Optional<List<User>> getAdminUsers();
-
+    // @Query("SELECT u FROM User u where u.isAdmin = true")
+    // List<User> getAdminUsers();
+    List<User> findByAdminTrue();
     // TODO - Write custom queries for these later...
     @Transactional
     User save(User user);

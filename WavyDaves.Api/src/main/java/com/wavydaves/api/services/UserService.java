@@ -6,6 +6,7 @@ import com.wavydaves.api.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
+import java.util.ArrayList;
 
 @Service
 public class UserService implements IUserService {
@@ -77,9 +78,13 @@ public class UserService implements IUserService {
     }
 
     public List<User> getAdminUsers() {
-        var result = userRepository.getAdminUsers();
-        if (result.isPresent()) {
-            return result.get();
+        List<User> adminUsers = new ArrayList<User>();
+        var result = userRepository.findByAdminTrue();
+        if (!result.isEmpty()) {
+            for (User user : result) {
+                adminUsers.add(user);
+            }
+            return adminUsers;
         }
         else {
             System.out.println("No admin users found");
