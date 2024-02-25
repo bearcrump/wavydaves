@@ -23,7 +23,7 @@ public class UserService implements IUserService {
     }
 
     public User getById(Integer id) {
-        var result = userRepository.findById(id);
+        var result = userRepository.getUserById(id);
         if (result.isPresent()) {
             return result.get();
         }
