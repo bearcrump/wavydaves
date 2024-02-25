@@ -108,6 +108,7 @@ public class UserService implements IUserService {
 
     public void postUser(UserEntity userEntity) {
         //fakeUsers.add(user);
+        System.out.println(userEntity.toString());
         userRepository.save(userEntity);
     }
 

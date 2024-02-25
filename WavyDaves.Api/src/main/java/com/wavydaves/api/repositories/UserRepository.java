@@ -35,7 +35,7 @@ public interface UserRepository extends JpaRepository<UserEntity, Integer> {
     @Query("")
     Optional<UserEntity> findById(Integer id);
     // some other repository methods hopefully.
-    UserEntity save(UserEntity userEntity);
+    <UserEntity extends User> UserEntity save(UserEntity userEntity);
     void deleteAllById(Integer id);
 
 }

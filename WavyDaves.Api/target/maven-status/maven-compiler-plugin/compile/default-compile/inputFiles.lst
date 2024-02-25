@@ -4,10 +4,12 @@
 /home/debian/Dev/WavyDaves/WavyDaves.Api/src/main/java/com/wavydaves/api/models/Item.java
 /home/debian/Dev/WavyDaves/WavyDaves.Api/src/main/java/com/wavydaves/api/models/User.java
 /home/debian/Dev/WavyDaves/WavyDaves.Api/src/main/java/com/wavydaves/api/interfaces/IUserService.java
+/home/debian/Dev/WavyDaves/WavyDaves.Api/src/main/java/com/wavydaves/api/repositories/UserRepository.java
 /home/debian/Dev/WavyDaves/WavyDaves.Api/src/main/java/com/wavydaves/api/models/OrderItem.java
 /home/debian/Dev/WavyDaves/WavyDaves.Api/src/main/java/com/wavydaves/api/interfaces/IItemService.java
 /home/debian/Dev/WavyDaves/WavyDaves.Api/src/main/java/com/wavydaves/api/controllers/UsersController.java
 /home/debian/Dev/WavyDaves/WavyDaves.Api/src/main/java/com/wavydaves/api/services/UserService.java
 /home/debian/Dev/WavyDaves/WavyDaves.Api/src/main/java/com/wavydaves/api/controllers/ItemsController.java
+/home/debian/Dev/WavyDaves/WavyDaves.Api/src/main/java/com/wavydaves/api/entities/UserEntity.java
 /home/debian/Dev/WavyDaves/WavyDaves.Api/src/main/java/com/wavydaves/api/models/Address.java
 /home/debian/Dev/WavyDaves/WavyDaves.Api/src/main/java/com/wavydaves/api/models/Order.java
