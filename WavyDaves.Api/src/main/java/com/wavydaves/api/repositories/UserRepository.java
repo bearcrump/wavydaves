@@ -1,7 +1,9 @@
 package com.wavydaves.api.repositories;
 
-import com.wavydaves.api.entities.UserEntity;
 import com.wavydaves.api.models.User;
+
+import jakarta.transaction.Transactional;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -10,7 +12,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UserRepository extends JpaRepository<UserEntity, Integer> {
+public interface UserRepository extends JpaRepository<User, Integer> {
 
 
 
@@ -29,13 +31,16 @@ public interface UserRepository extends JpaRepository<UserEntity, Integer> {
     // public void updateUser(User newUser);
     // public void deleteUser(Integer userId);
 
-    @Query("SELECT u FROM UserEntity u")
-    List<UserEntity> findAll();
+    @Query("SELECT u FROM User u")
+    List<User> findAll();
 
-    @Query("")
-    Optional<UserEntity> findById(Integer id);
+    // @Query("")
+    // Optional<User> findById(Integer id);
     // some other repository methods hopefully.
-    <UserEntity extends User> UserEntity save(UserEntity userEntity);
+
+
+    @Transactional
+    User save(User user);
     void deleteAllById(Integer id);
 
 }

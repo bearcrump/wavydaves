@@ -20,7 +20,7 @@ public class UsersController {
     }
 
     @GetMapping
-    public ResponseEntity<List<UserEntity>> getAllUsers() {
+    public ResponseEntity<List<User>> getAllUsers() {
         return ResponseEntity.ok(userService.getAllUsers());
     }
 
@@ -30,8 +30,8 @@ public class UsersController {
     }
 
     @GetMapping("/FirstName")
-    public User getUserByFirstName(@RequestParam String firstName) {
-        return userService.getUserByFirstName(firstName);
+    public ResponseEntity<User> getUserByFirstName(@RequestParam String firstName) {
+        return ResponseEntity.ok(userService.getUserByFirstName(firstName));
     }
 
     @GetMapping("/LastName")
@@ -40,8 +40,8 @@ public class UsersController {
     }
 
     @PostMapping
-    public void postUser(UserEntity userEntity) {
-        userService.postUser(userEntity);
+    public ResponseEntity<User> postUser(@RequestBody User user) {
+        return ResponseEntity.ok(userService.postUser(user));
     }
 
     @PutMapping

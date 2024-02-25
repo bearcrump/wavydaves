@@ -14,7 +14,7 @@ public class UserEntity {
     private String email;
     private String password;
     private String phoneNumber;
-    private Boolean isAdmin;
+    private Boolean isAdmin = false;
 
     public UserEntity() {
 
@@ -43,7 +43,7 @@ public class UserEntity {
         this.id = id;
     }
 
-    @Column(name="credicardid", nullable=true)
+    @Column(name="creditcardid", nullable=true)
     public Integer getCreditCardId() {
         return creditCardId;
     }
@@ -106,7 +106,7 @@ public class UserEntity {
         this.phoneNumber = phoneNumber;
     }
 
-    @Column(name="admin", nullable = false)
+    @Column(name="isadmin", nullable = false)
     public Boolean getAdmin() {
         return isAdmin;
     }

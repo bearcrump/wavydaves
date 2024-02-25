@@ -12,22 +12,15 @@ import java.util.List;
 @Service
 public class UserService implements IUserService {
 
-    private ArrayList<User> fakeUsers = new ArrayList<User>();
     private final UserRepository userRepository;
-    
+    private final List<User> fakeUsers = new ArrayList<User>();
+
     @Autowired
     public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
-    public void addUsers () {
-        User dirf = new User(null, null,null,"Dirf","McDoogenhauser", "itzDirfOrNuthin@dmail.net", "dirfedyermom", "689-6969", null);
-        User doot = new User(null,null,null,"Doot", "Doot", "doot@doot.doot", "doot", "979-9797",false);
-        fakeUsers.add(dirf);
-        fakeUsers.add(doot);
-    }
-
-    public List<UserEntity> getAllUsers() {
+    public List<User> getAllUsers() {
         return userRepository.findAll();
     }
 
@@ -106,10 +99,8 @@ public class UserService implements IUserService {
         return admins;
     }
 
-    public void postUser(UserEntity userEntity) {
-        //fakeUsers.add(user);
-        System.out.println(userEntity.toString());
-        userRepository.save(userEntity);
+    public User postUser(User user) {
+        return userRepository.save(user);
     }
 
     public void updateUser(User newUser) {
