@@ -1,6 +1,5 @@
 package com.wavydaves.api.controllers;
 
-import com.wavydaves.api.entities.UserEntity;
 import com.wavydaves.api.interfaces.IUserService;
 import com.wavydaves.api.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,33 +23,33 @@ public class UsersController {
         return ResponseEntity.ok(userService.getAllUsers());
     }
 
-    @GetMapping("/byId")
-    public ResponseEntity<User> getByUserId(Integer userId) {
+    @GetMapping("/id")
+    public ResponseEntity<User> getByUserId(@RequestParam Integer userId) {
         return ResponseEntity.ok(userService.getById(userId));
     }
 
-    @GetMapping("/FirstName")
-    public ResponseEntity<User> getUserByFirstName(@RequestParam String firstName) {
-        return ResponseEntity.ok(userService.getUserByFirstName(firstName));
+    @GetMapping("/first_name")
+    public ResponseEntity<List<User>> getUserByFirstName(@RequestParam String firstName) {
+        return ResponseEntity.ok(userService.getUsersByFirstName(firstName));
     }
 
-    @GetMapping("/LastName")
-    public User getUserByLastName(@RequestParam String lastName) {
-        return userService.getUserByLastName(lastName);
+    @GetMapping("/last_name")
+    public ResponseEntity<List<User>> getUsersByLastName(@RequestParam String lastName) {
+        return ResponseEntity.ok(userService.getUsersByLastName(lastName));
     }
 
     @PostMapping
     public ResponseEntity<User> postUser(@RequestBody User user) {
-        return ResponseEntity.ok(userService.postUser(user));
+        return ResponseEntity.ok(userService.upsertUser(user));
     }
 
     @PutMapping
-    public void putUser(User user) {
-        userService.updateUser(user);
+    public ResponseEntity<User> putUser(@RequestBody User user) {
+        return ResponseEntity.ok(userService.upsertUser(user));
     }
 
     @DeleteMapping
-    public void deleteUserById(Integer userId) {
+    public void deleteUserById(@RequestParam Integer userId) {
         userService.deleteUser(userId);
     }
 

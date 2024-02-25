@@ -1,12 +1,9 @@
 package com.wavydaves.api.repositories;
 
 import com.wavydaves.api.models.User;
-
 import jakarta.transaction.Transactional;
-
 import java.util.List;
 import java.util.Optional;
-
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -14,33 +11,31 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer> {
 
-
-
-    //Written with JPQL syntax??
-
-
-    // ~~~~~ Taken From IUserService ~~~~~~~~~
-    // public List<User> getAllUsers();
-    // public User getById(Integer id);
-    // public User getUserByFirstName(String firstName); --TODO findByProperty?
-    // public User getUserByLastName(String lastName); -- TODO findByProperty?
-    // public User getUserByEmail(String email); --TODO
-    // public User getUserByPhoneNumber(String phoneNumber); -- TODO
-    // public ArrayList<User> getAdminUsers(); -- TODO
-    // public void postUser(User user);
-    // public void updateUser(User newUser);
-    // public void deleteUser(Integer userId);
-
     @Query("SELECT u FROM User u")
-    List<User> findAll();
+    List<User> getAllUsers();
 
-    // @Query("")
-    // Optional<User> findById(Integer id);
-    // some other repository methods hopefully.
+    @Query("SELECT u FROM User u where u.id = ?1")
+    Optional<User> getUserById(Integer id);
 
+    @Query("SELECT u FROM User u where u.firstName = ?1")
+    Optional<List<User>> getUserByFirstName(String firstName);
 
+    @Query("SELECT u FROM User u where u.lastName = ?1")
+    Optional<List<User>> getUserByLastName(String lastName);
+
+    @Query("SELECT u FROM User u where u.email = ?1")
+    Optional<User> getUserByEmail(String email);
+
+    @Query("SELECT u FROM User u where u.phoneNumber = ?1")
+    Optional<List<User>> getUsersByPhoneNumber(String phoneNumber);
+
+    @Query("SELECT u FROM User u where u.isadmin = true")
+    Optional<List<User>> getAdminUsers();
+
+    // TODO - Write custom queries for these later...
     @Transactional
     User save(User user);
-    void deleteAllById(Integer id);
 
+    @Transactional
+    void deleteAllById(Integer id);
 }
