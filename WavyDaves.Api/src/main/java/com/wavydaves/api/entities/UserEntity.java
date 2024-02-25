@@ -1,6 +1,11 @@
-package com.wavydaves.api.models;
+package com.wavydaves.api.entities;
 
-public class User {
+import jakarta.persistence.*;
+
+@Entity
+@Table(name="users")
+public class UserEntity {
+
     private Integer id;
     private Integer creditCardId;
     private Integer addressId;
@@ -11,10 +16,11 @@ public class User {
     private String phoneNumber;
     private Boolean isAdmin;
 
-    public User() {
+    public UserEntity() {
 
     }
-    public User(Integer id, Integer creditCardId, Integer addressId, String firstName, String lastName,
+
+    public UserEntity(Integer id, Integer creditCardId, Integer addressId, String firstName, String lastName,
                 String email, String password, String phoneNumber, Boolean isAdmin) {
         this.id = id;
         this.creditCardId = creditCardId;
@@ -27,6 +33,8 @@ public class User {
         this.isAdmin = isAdmin;
     }
 
+    @Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer getId() {
         return id;
     }
@@ -35,6 +43,7 @@ public class User {
         this.id = id;
     }
 
+    @Column(name="credicardid", nullable=true)
     public Integer getCreditCardId() {
         return creditCardId;
     }
@@ -43,14 +52,16 @@ public class User {
         this.creditCardId = creditCardId;
     }
 
+    @Column(name="addressid", nullable = true)
     public Integer getAddressId() {
         return addressId;
     }
-
+    
     public void setAddressId(Integer addressId) {
         this.addressId = addressId;
     }
 
+    @Column(name="firstname", nullable = false)
     public String getFirstName() {
         return firstName;
     }
@@ -59,6 +70,7 @@ public class User {
         this.firstName = firstName;
     }
 
+    @Column(name="lastname", nullable = false)
     public String getLastName() {
         return lastName;
     }
@@ -67,6 +79,7 @@ public class User {
         this.lastName = lastName;
     }
 
+    @Column(name="email", nullable = false)
     public String getEmail() {
         return email;
     }
@@ -75,6 +88,7 @@ public class User {
         this.email = email;
     }
 
+    @Column(name="password", nullable = false)
     public String getPassword() {
         return password;
     }
@@ -83,6 +97,7 @@ public class User {
         this.password = password;
     }
 
+    @Column(name="phonenumber", nullable = true)
     public String getPhoneNumber() {
         return phoneNumber;
     }
@@ -91,6 +106,7 @@ public class User {
         this.phoneNumber = phoneNumber;
     }
 
+    @Column(name="admin", nullable = false)
     public Boolean getAdmin() {
         return isAdmin;
     }

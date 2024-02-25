@@ -1,5 +1,6 @@
 package com.wavydaves.api.controllers;
 
+import com.wavydaves.api.entities.UserEntity;
 import com.wavydaves.api.interfaces.IUserService;
 import com.wavydaves.api.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,7 @@ public class UsersController {
     }
 
     @GetMapping
-    public ResponseEntity<List<User>> getAllUsers() {
+    public ResponseEntity<List<UserEntity>> getAllUsers() {
         return ResponseEntity.ok(userService.getAllUsers());
     }
 
@@ -39,8 +40,8 @@ public class UsersController {
     }
 
     @PostMapping
-    public void postUser(User user) {
-        userService.postUser(user);
+    public void postUser(UserEntity userEntity) {
+        userService.postUser(userEntity);
     }
 
     @PutMapping

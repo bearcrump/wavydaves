@@ -1,7 +1,10 @@
 package com.wavydaves.api.services;
 
+import com.wavydaves.api.entities.UserEntity;
 import com.wavydaves.api.interfaces.IUserService;
 import com.wavydaves.api.models.User;
+import com.wavydaves.api.repositories.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,8 +13,11 @@ import java.util.List;
 public class UserService implements IUserService {
 
     private ArrayList<User> fakeUsers = new ArrayList<User>();
-    public UserService() {
-        addUsers();
+    private final UserRepository userRepository;
+    
+    @Autowired
+    public UserService(UserRepository userRepository) {
+        this.userRepository = userRepository;
     }
 
     public void addUsers () {
@@ -21,12 +27,8 @@ public class UserService implements IUserService {
         fakeUsers.add(doot);
     }
 
-    public ArrayList<User> getUsers() {
-        return fakeUsers;
-    }
-
-    public List<User> getAllUsers() {
-        return fakeUsers;
+    public List<UserEntity> getAllUsers() {
+        return userRepository.findAll();
     }
 
     public User getById(Integer id) {
@@ -104,8 +106,9 @@ public class UserService implements IUserService {
         return admins;
     }
 
-    public void postUser(User user) {
-        fakeUsers.add(user);
+    public void postUser(UserEntity userEntity) {
+        //fakeUsers.add(user);
+        userRepository.save(userEntity);
     }
 
     public void updateUser(User newUser) {
