@@ -55,13 +55,13 @@ public class ItemsController {
     }
 
     @PostMapping
-    public Item postItem(Item item) {
-        return itemService.upsertItem(item);
+    public ResponseEntity<Item> postItem(@RequestBody Item item) {
+        return ResponseEntity.ok(itemService.upsertItem(item));
     }
 
     @PutMapping
-    public Item putItem(Item item) {
-        return itemService.upsertItem(item);
+    public ResponseEntity<Item> putItem(@RequestBody Item item) {
+        return ResponseEntity.ok(itemService.upsertItem(item));
     }
 
     @DeleteMapping

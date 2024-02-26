@@ -54,7 +54,7 @@ public class Item {
         this.category = category;
     }
 
-    @Column(name="pricedollars")
+    @Column(name="priceDollars")
     public Integer getPriceDollars() {
         return priceDollars;
     }
