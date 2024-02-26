@@ -1,6 +1,11 @@
 package com.wavydaves.api.models;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name="items")
 public class Item {
+
     private Integer id;
     private String name;
     private String category;
@@ -21,6 +26,8 @@ public class Item {
         this.size = size;
     }
 
+    @Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer getId() {
         return id;
     }
@@ -29,6 +36,7 @@ public class Item {
         this.id = id;
     }
 
+    @Column(name="name")
     public String getName() {
         return name;
     }
@@ -37,6 +45,7 @@ public class Item {
         this.name = name;
     }
 
+    @Column(name="category")
     public String getCategory() {
         return category;
     }
@@ -45,6 +54,7 @@ public class Item {
         this.category = category;
     }
 
+    @Column(name="pricedollars")
     public Integer getPriceDollars() {
         return priceDollars;
     }
@@ -53,6 +63,7 @@ public class Item {
         this.priceDollars = priceDollars;
     }
 
+    @Column(name="pricecents")
     public Integer getPriceCents() {
         return priceCents;
     }
@@ -61,6 +72,7 @@ public class Item {
         this.priceCents = priceCents;
     }
 
+    @Column(name="size")
     public String getSize() {
         return size;
     }

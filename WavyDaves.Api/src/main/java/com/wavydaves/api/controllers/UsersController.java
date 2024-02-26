@@ -11,6 +11,7 @@ import java.util.List;
 @RestController
 @RequestMapping("api/v1/users")
 public class UsersController {
+
     private final IUserService userService;
 
     @Autowired
@@ -25,7 +26,7 @@ public class UsersController {
 
     @GetMapping("/id")
     public ResponseEntity<User> getByUserId(@RequestParam Integer userId) {
-        return ResponseEntity.ok(userService.getById(userId));
+        return ResponseEntity.ok(userService.getUserById(userId));
     }
 
     @GetMapping("/first_name")

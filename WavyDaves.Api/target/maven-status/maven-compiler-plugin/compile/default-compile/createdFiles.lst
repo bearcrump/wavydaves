@@ -4,8 +4,8 @@ com/wavydaves/api/controllers/UsersController.class
 com/wavydaves/api/interfaces/IItemService.class
 com/wavydaves/api/models/Item.class
 com/wavydaves/api/interfaces/IUserService.class
-com/wavydaves/api/models/User.class
 com/wavydaves/api/models/Address.class
+com/wavydaves/api/models/User.class
 com/wavydaves/api/models/OrderItem.class
 com/wavydaves/api/models/Order.class
 com/wavydaves/api/Application.class

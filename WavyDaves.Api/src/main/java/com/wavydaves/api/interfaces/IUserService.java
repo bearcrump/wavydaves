@@ -5,7 +5,7 @@ import java.util.List;
 
 public interface IUserService {
     public List<User> getAllUsers();
-    public User getById(Integer id);
+    public User getUserById(Integer id);
     public List<User> getUsersByFirstName(String firstName);
     public List<User> getUsersByLastName(String lastName);
     public User getUserByEmail(String email);
