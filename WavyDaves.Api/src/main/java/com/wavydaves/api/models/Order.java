@@ -1,8 +1,8 @@
 package com.wavydaves.api.models;
 
 import org.springframework.lang.Nullable;
-
 import java.time.ZonedDateTime;
+import java.util.List;
 
 public class Order {
     private Integer id;
@@ -16,13 +16,14 @@ public class Order {
     private Integer totalDollars;
     private Integer totalCents;
     private Boolean isDelivery;
+    private List<Item> orderItems;
 
     public Order() {
 
     }
 
     public Order(Integer id, @Nullable Integer userId, @Nullable Integer addressId, String paymentType, String name, ZonedDateTime orderDate,
-                 Integer totalDollars, Integer totalCents, Boolean isDelivery) {
+                 Integer totalDollars, Integer totalCents, Boolean isDelivery, List<Item> orderItems) {
         this.id = id;
         this.userId = userId;
         this.addressId = addressId;
@@ -32,6 +33,7 @@ public class Order {
         this.totalDollars = totalDollars;
         this.totalCents = totalCents;
         this.isDelivery = isDelivery;
+        this.orderItems = orderItems;
     }
 
     public Integer getId() {
@@ -106,5 +108,13 @@ public class Order {
 
     public void setDelivery(Boolean delivery) {
         isDelivery = delivery;
+    }
+
+    public List<Item> getOrderItems() {
+        return orderItems;
+    }
+
+    public void setOrderItems(List<Item> orderItems) {
+        this.orderItems = orderItems;
     }
 }

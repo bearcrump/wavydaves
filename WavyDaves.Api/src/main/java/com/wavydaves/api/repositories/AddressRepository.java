@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Repository;
 import com.wavydaves.api.models.Address;
 import jakarta.transaction.Transactional;
@@ -30,9 +31,8 @@ public interface AddressRepository extends JpaRepository<Address, Integer>{
     Optional<List<Address>> getAddressesByZip(Integer zip);
 
     @Transactional
-    Address save(Address address);
+    @NonNull Address save(@NonNull Address address);
 
     @Transactional
-    void deleteAllById(Integer id);
-    
+    void deleteAllById(Integer id);   
 }

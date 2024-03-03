@@ -7,7 +7,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import com.wavydaves.api.interfaces.IAddressService;
 import com.wavydaves.api.models.Address;
-import com.wavydaves.api.models.Item;
 
 @RestController
 @RequestMapping("api/v1/addresses")
