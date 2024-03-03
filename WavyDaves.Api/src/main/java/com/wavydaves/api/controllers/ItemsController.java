@@ -13,26 +13,11 @@ import java.util.List;
 public class ItemsController {
 
     private final IItemService itemService;
-    //private  ArrayList<Item> fakeItems = new ArrayList<Item>();
 
     @Autowired
     public ItemsController(IItemService itemService) {
         this.itemService = itemService;
     }
-
-    // public void addFakeItems() {
-    //     Item pizza = new Item(null, "Pizza", "Pizza", 14, 99, "Medium" );
-    //     Item carbonatedMilk = new Item(null, "Carbonated Milk", "Beverage", 3, 99, "Half Gallon" );
-    //     Item wavyGravy = new Item(null, "Wavy Gravy", "Condiment", 0, 99, "1 cup" );
-    //     Item sammich = new Item(null, "Sammich", "Sandwich", 6, 99, "Full" );
-    //     Item hotDogWater = new Item (null, "Hot Dog Water", "Beverage", 3, 99, "2 Liter" );
-
-    //     fakeItems.add(pizza);
-    //     fakeItems.add(carbonatedMilk);
-    //     fakeItems.add(wavyGravy);
-    //     fakeItems.add(sammich);
-    //     fakeItems.add(hotDogWater);
-    // }
 
     @GetMapping
     public ResponseEntity<List<Item>> getItems() {

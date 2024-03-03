@@ -65,8 +65,8 @@ public class UsersController {
     }
 
     @DeleteMapping
-    public void deleteUserById(@RequestParam Integer userId) {
-        userService.deleteUser(userId);
+    public void deleteUserById(@RequestParam Integer id) {
+        userService.deleteUser(id);
     }
 
     @ExceptionHandler(Exception.class)
