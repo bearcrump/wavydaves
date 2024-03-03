@@ -58,7 +58,7 @@ public class ItemService implements IItemService {
         return itemRepository.save(item);
     }
 
-    public void deleteItem(Integer id) {
+    public void deleteItemById(Integer id) {
         itemRepository.deleteAllById(id);
     }
 }

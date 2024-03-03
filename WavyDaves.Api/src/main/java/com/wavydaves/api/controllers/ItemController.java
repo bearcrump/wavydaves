@@ -10,12 +10,12 @@ import java.util.List;
 
 @RestController
 @RequestMapping("api/v1/items")
-public class ItemsController {
+public class ItemController {
 
     private final IItemService itemService;
 
     @Autowired
-    public ItemsController(IItemService itemService) {
+    public ItemController(IItemService itemService) {
         this.itemService = itemService;
     }
 
@@ -50,8 +50,8 @@ public class ItemsController {
     }
 
     @DeleteMapping
-    public void deleteItem(Integer id) {
-        itemService.deleteItem(id);
+    public void deleteItemById(Integer id) {
+        itemService.deleteItemById(id);
     }
 
     @ExceptionHandler(Exception.class)

@@ -9,5 +9,5 @@ public interface IItemService {
     public Item getItemByName(String name);
     public List<Item> getItemsByCategory(String category);
     public Item upsertItem(Item item);
-    public void deleteItem(Integer id);
+    public void deleteItemById(Integer id);
 }

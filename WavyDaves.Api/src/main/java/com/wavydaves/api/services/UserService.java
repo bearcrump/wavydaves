@@ -19,7 +19,7 @@ public class UserService implements IUserService {
     }
 
     public List<User> getAllUsers() {
-        return userRepository.findAll();
+        return userRepository.getAllUsers();
     }
 
     public User getUserById(Integer id) {
