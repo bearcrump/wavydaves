@@ -3,7 +3,10 @@ package com.wavydaves.api.models;
 import org.springframework.lang.Nullable;
 import java.time.ZonedDateTime;
 import java.util.List;
+import jakarta.persistence.*;
 
+@Entity
+@Table(name="orders")
 public class Order {
     private Integer id;
     @Nullable
@@ -16,7 +19,7 @@ public class Order {
     private Integer totalDollars;
     private Integer totalCents;
     private Boolean isDelivery;
-    private List<Item> orderItems;
+    //private List<Item> orderItems; Determined these may be a separate table in db. ORM map them onto one app model? doable in Java/Springboot?
 
     public Order() {
 
@@ -33,9 +36,11 @@ public class Order {
         this.totalDollars = totalDollars;
         this.totalCents = totalCents;
         this.isDelivery = isDelivery;
-        this.orderItems = orderItems;
+        //this.orderItems = orderItems;
     }
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer getId() {
         return id;
     }
@@ -44,7 +49,7 @@ public class Order {
         this.id = id;
     }
 
-    @Nullable
+    @Column(name = "userid", nullable = true)
     public Integer getUserId() {
         return userId;
     }
@@ -53,7 +58,7 @@ public class Order {
         this.userId = userId;
     }
 
-    @Nullable
+    @Column(name = "addressid", nullable = true)
     public Integer getAddressId() {
         return addressId;
     }
@@ -62,6 +67,7 @@ public class Order {
         this.addressId = addressId;
     }
 
+    @Column(name = "paymenttype")
     public String getPaymentType() {
         return paymentType;
     }
@@ -70,6 +76,7 @@ public class Order {
         this.paymentType = paymentType;
     }
 
+    @Column(name = "name")
     public String getName() {
         return name;
     }
@@ -78,6 +85,7 @@ public class Order {
         this.name = name;
     }
 
+    @Column(name = "orderdate")
     public ZonedDateTime getOrderDate() {
         return orderDate;
     }
@@ -86,6 +94,7 @@ public class Order {
         this.orderDate = orderDate;
     }
 
+    @Column(name = "totaldollars")
     public Integer getTotalDollars() {
         return totalDollars;
     }
@@ -94,6 +103,7 @@ public class Order {
         this.totalDollars = totalDollars;
     }
 
+    @Column(name = "totalcents")
     public Integer getTotalCents() {
         return totalCents;
     }
@@ -102,6 +112,7 @@ public class Order {
         this.totalCents = totalCents;
     }
 
+    @Column(name = "isdelivery")
     public Boolean getDelivery() {
         return isDelivery;
     }
@@ -110,11 +121,11 @@ public class Order {
         isDelivery = delivery;
     }
 
-    public List<Item> getOrderItems() {
-        return orderItems;
-    }
+    // public List<Item> getOrderItems() {
+    //     return orderItems;
+    // }
 
-    public void setOrderItems(List<Item> orderItems) {
-        this.orderItems = orderItems;
-    }
+    // public void setOrderItems(List<Item> orderItems) {
+    //     this.orderItems = orderItems;
+    // }
 }

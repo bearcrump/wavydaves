@@ -47,7 +47,7 @@ public class CreditCard {
         this.addressId = addressId;
     }
 
-    @Nullable
+    @Column(name="userid", nullable = true)
     public Integer getUserId() {
         return userId;
     }
@@ -56,6 +56,7 @@ public class CreditCard {
         this.userId = userId;
     }
 
+    @Column(name="cardnumber")
     public Integer getCardNumber() {
         return cardNumber;
     }
@@ -64,6 +65,7 @@ public class CreditCard {
         this.cardNumber = cardNumber;
     }
 
+    @Column(name="name")
     public String getName() {
         return name;
     }
@@ -72,6 +74,7 @@ public class CreditCard {
         this.name = name;
     }
 
+    @Column(name="expirationdate")
     public ZonedDateTime getExpirationDate() {
         return expirationDate;
     }

@@ -1,5 +1,9 @@
 package com.wavydaves.api.models;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name="orderitems")
 public class OrderItem {
     private Integer id;
     private Integer orderId;
@@ -18,6 +22,8 @@ public class OrderItem {
         this.quantity = quantity;
     }
 
+    @Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer getId() {
         return id;
     }
@@ -26,6 +32,7 @@ public class OrderItem {
         this.id = id;
     }
 
+    @Column(name = "orderid")
     public Integer getOrderId() {
         return orderId;
     }
@@ -34,6 +41,7 @@ public class OrderItem {
         this.orderId = orderId;
     }
 
+    @Column(name = "itemid")
     public Integer getItemId() {
         return itemId;
     }
@@ -42,6 +50,7 @@ public class OrderItem {
         this.itemId = itemId;
     }
 
+    @Column(name = "quantity")
     public Integer getQuantity() {
         return quantity;
     }

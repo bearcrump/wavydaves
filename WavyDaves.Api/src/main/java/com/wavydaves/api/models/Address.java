@@ -28,6 +28,8 @@ public class Address {
         this.zip = zip;
     }
 
+    @Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer getId() {
         return id;
     }
@@ -36,6 +38,7 @@ public class Address {
         this.id = id;
     }
 
+    @Column(name = "country")
     public String getCountry() {
         return country;
     }
@@ -44,6 +47,7 @@ public class Address {
         this.country = country;
     }
 
+    @Column(name = "state")
     public String getState() {
         return state;
     }
@@ -52,6 +56,7 @@ public class Address {
         this.state = state;
     }
 
+    @Column(name = "city")
     public String getCity() {
         return city;
     }
@@ -60,6 +65,7 @@ public class Address {
         this.city = city;
     }
 
+    @Column(name = "line1")
     public String getLine1() {
         return line1;
     }
@@ -68,7 +74,7 @@ public class Address {
         this.line1 = line1;
     }
 
-    @Nullable
+    @Column(name = "line2", nullable = true)
     public String getLine2() {
         return line2;
     }
@@ -77,6 +83,7 @@ public class Address {
         this.line2 = line2;
     }
 
+    @Column(name = "zip")
     public Integer getZip() {
         return zip;
     }

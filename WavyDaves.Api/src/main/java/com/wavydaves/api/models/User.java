@@ -43,7 +43,7 @@ public class User {
         this.id = id;
     }
 
-    @Column(name="creditcardid", nullable=true)
+    @Column(name = "creditcardid", nullable = true)
     public Integer getCreditCardId() {
         return creditCardId;
     }
@@ -52,7 +52,7 @@ public class User {
         this.creditCardId = creditCardId;
     }
 
-    @Column(name="addressid", nullable = true)
+    @Column(name = "addressid", nullable = true)
     public Integer getAddressId() {
         return addressId;
     }
@@ -61,7 +61,7 @@ public class User {
         this.addressId = addressId;
     }
 
-    @Column(name="firstname", nullable = false)
+    @Column(name = "firstname", nullable = false)
     public String getFirstName() {
         return firstName;
     }
@@ -70,7 +70,7 @@ public class User {
         this.firstName = firstName;
     }
 
-    @Column(name="lastname", nullable = false)
+    @Column(name = "lastname", nullable = false)
     public String getLastName() {
         return lastName;
     }
@@ -79,7 +79,7 @@ public class User {
         this.lastName = lastName;
     }
 
-    @Column(name="email", nullable = false)
+    @Column(name = "email", nullable = false)
     public String getEmail() {
         return email;
     }
@@ -88,7 +88,7 @@ public class User {
         this.email = email;
     }
 
-    @Column(name="password", nullable = false)
+    @Column(name = "password", nullable = false)
     public String getPassword() {
         return password;
     }
@@ -97,7 +97,7 @@ public class User {
         this.password = password;
     }
 
-    @Column(name="phonenumber", nullable = true)
+    @Column(name = "phonenumber", nullable = true)
     public String getPhoneNumber() {
         return phoneNumber;
     }
@@ -106,7 +106,7 @@ public class User {
         this.phoneNumber = phoneNumber;
     }
 
-    @Column(name="isadmin", nullable = false)
+    @Column(name = "isadmin", nullable = false)
     public Boolean getAdmin() {
         return isAdmin;
     }

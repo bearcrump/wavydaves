@@ -4,7 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8e5d98d-3b14-4575-989c-7c93fd5c804f" name="Changes" comment="/" />
+    <list default="true" id="e8e5d98d-3b14-4575-989c-7c93fd5c804f" name="Changes" comment="/">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wavydaves/api/models/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wavydaves/api/models/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wavydaves/api/models/CreditCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wavydaves/api/models/CreditCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wavydaves/api/models/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wavydaves/api/models/OrderItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wavydaves/api/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wavydaves/api/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wavydaves/api/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wavydaves/api/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wavydaves/api/controllers/ItemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wavydaves/api/controllers/ItemController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wavydaves/api/controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wavydaves/api/controllers/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wavydaves/api/interfaces/IItemService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wavydaves/api/interfaces/IItemService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wavydaves/api/interfaces/IUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wavydaves/api/interfaces/IUserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wavydaves/api/models/Address.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wavydaves/api/models/Address.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wavydaves/api/models/CreditCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wavydaves/api/models/CreditCard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wavydaves/api/models/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wavydaves/api/models/Item.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wavydaves/api/models/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wavydaves/api/models/Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wavydaves/api/models/OrderItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wavydaves/api/models/OrderItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wavydaves/api/models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wavydaves/api/models/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wavydaves/api/repositories/ItemRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wavydaves/api/repositories/ItemRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wavydaves/api/repositories/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wavydaves/api/repositories/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wavydaves/api/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wavydaves/api/services/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/wavydaves/api/ApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/wavydaves/api/ApplicationTests.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
