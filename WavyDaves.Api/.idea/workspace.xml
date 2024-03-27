@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8e5d98d-3b14-4575-989c-7c93fd5c804f" name="Changes" comment="/" />
+    <list default="true" id="e8e5d98d-3b14-4575-989c-7c93fd5c804f" name="Changes" comment="/">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wavydaves/api/interfaces/ICreditCardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wavydaves/api/interfaces/ICreditCardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wavydaves/api/repositories/CreditCardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wavydaves/api/repositories/CreditCardRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wavydaves/api/interfaces/ICreditCardService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wavydaves/api/interfaces/ICreditCardService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wavydaves/api/repositories/CreditCardRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wavydaves/api/repositories/CreditCardRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wavydaves/api/repositories/ItemRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wavydaves/api/repositories/ItemRepository.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
