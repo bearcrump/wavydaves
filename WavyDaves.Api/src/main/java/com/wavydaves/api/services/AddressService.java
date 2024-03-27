@@ -1,11 +1,14 @@
 package com.wavydaves.api.services;
 
 import java.util.List;
+import com.wavydaves.api.interfaces.IAddressService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import com.wavydaves.api.models.Address;
 import com.wavydaves.api.repositories.AddressRepository;
 
-public class AddressService {
+@Service
+public class AddressService implements IAddressService {
 
     private final AddressRepository addressRepository;
 

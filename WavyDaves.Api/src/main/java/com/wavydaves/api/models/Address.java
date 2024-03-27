@@ -1,7 +1,10 @@
 package com.wavydaves.api.models;
 
+import jakarta.persistence.*;
 import org.springframework.lang.Nullable;
 
+@Entity
+@Table(name="addresses")
 public class Address {
     private Integer id;
     private String country;

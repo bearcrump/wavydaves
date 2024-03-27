@@ -2,10 +2,11 @@ package com.wavydaves.api.services;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import com.wavydaves.api.interfaces.ICreditCardService;
 import com.wavydaves.api.models.CreditCard;
 import com.wavydaves.api.repositories.CreditCardRepository;
 
-public class CreditCardService {
+public class CreditCardService implements ICreditCardService {
 
     private final CreditCardRepository creditCardRepository;
 

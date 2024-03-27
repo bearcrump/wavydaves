@@ -1,8 +1,11 @@
 package com.wavydaves.api.models;
 
+import jakarta.persistence.*;
 import org.springframework.lang.Nullable;
 import java.time.ZonedDateTime;
 
+@Entity
+@Table(name="creditcards")
 public class CreditCard {
     private Integer id;
     private Integer addressId;
@@ -25,6 +28,8 @@ public class CreditCard {
         this.expirationDate = expirationDate;
     }
 
+    @Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer getId() {
         return id;
     }
@@ -33,6 +38,7 @@ public class CreditCard {
         this.id = id;
     }
 
+    @Column(name="addressid")
     public Integer getAddressId() {
         return addressId;
     }
