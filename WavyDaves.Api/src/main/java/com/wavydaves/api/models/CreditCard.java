@@ -2,8 +2,7 @@ package com.wavydaves.api.models;
 
 import jakarta.persistence.*;
 import org.springframework.lang.Nullable;
-import com.fasterxml.jackson.annotation.JsonFormat;
-import java.time.ZonedDateTime;
+import java.time.OffsetDateTime;
 
 @Entity
 @Table(name="creditcards")
@@ -14,13 +13,13 @@ public class CreditCard {
     private Integer userId;
     private Integer cardNumber;
     private String name;
-    private ZonedDateTime expirationDate;
+    private OffsetDateTime expirationDate;
 
     public CreditCard() {
 
     }
 
-    public CreditCard(Integer id, Integer addressId, @Nullable Integer userId, Integer cardNumber, String name, ZonedDateTime expirationDate) {
+    public CreditCard(Integer id, Integer addressId, @Nullable Integer userId, Integer cardNumber, String name, OffsetDateTime expirationDate) {
         this.id = id;
         this.addressId = addressId;
         this.userId = userId;
@@ -75,13 +74,12 @@ public class CreditCard {
         this.name = name;
     }
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSZ")
     @Column(name="expirationdate")
-    public ZonedDateTime getExpirationDate() {
+    public OffsetDateTime getExpirationDate() {
         return expirationDate;
     }
 
-    public void setExpirationDate(ZonedDateTime expirationDate) {
+    public void setExpirationDate(OffsetDateTime expirationDate) {
         this.expirationDate = expirationDate;
     }
 }

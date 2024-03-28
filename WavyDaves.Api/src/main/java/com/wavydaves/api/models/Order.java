@@ -1,7 +1,7 @@
 package com.wavydaves.api.models;
 
 import org.springframework.lang.Nullable;
-import java.time.ZonedDateTime;
+import java.time.OffsetDateTime;
 import java.util.List;
 import jakarta.persistence.*;
 
@@ -15,7 +15,7 @@ public class Order {
     private Integer addressId;
     private String paymentType;
     private String name;
-    private ZonedDateTime orderDate;
+    private OffsetDateTime orderDate;
     private Integer totalDollars;
     private Integer totalCents;
     private Boolean isDelivery;
@@ -25,7 +25,7 @@ public class Order {
 
     }
 
-    public Order(Integer id, @Nullable Integer userId, @Nullable Integer addressId, String paymentType, String name, ZonedDateTime orderDate,
+    public Order(Integer id, @Nullable Integer userId, @Nullable Integer addressId, String paymentType, String name, OffsetDateTime orderDate,
                  Integer totalDollars, Integer totalCents, Boolean isDelivery, List<Item> orderItems) {
         this.id = id;
         this.userId = userId;
@@ -86,11 +86,11 @@ public class Order {
     }
 
     @Column(name = "orderdate")
-    public ZonedDateTime getOrderDate() {
+    public OffsetDateTime getOrderDate() {
         return orderDate;
     }
 
-    public void setOrderDate(ZonedDateTime orderDate) {
+    public void setOrderDate(OffsetDateTime orderDate) {
         this.orderDate = orderDate;
     }
 
