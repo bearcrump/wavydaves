@@ -25,22 +25,22 @@ public class AddressController {
     }
 
     @GetMapping("/country")
-    public ResponseEntity<List<Address>> getAddressByCountry(@RequestParam String country) {
+    public ResponseEntity<List<Address>> getAddressesByCountry(@RequestParam String country) {
         return ResponseEntity.ok(addressService.getAddressesByCountry(country));
     }
 
     @GetMapping("/state")
-    public ResponseEntity<List<Address>> getAddressByState(@RequestParam String state) {
+    public ResponseEntity<List<Address>> getAddressesByState(@RequestParam String state) {
         return ResponseEntity.ok(addressService.getAddressesByState(state));
     }
 
     @GetMapping("/city")
-    public ResponseEntity<List<Address>> getAddressByCity(@RequestParam String city) {
+    public ResponseEntity<List<Address>> getAddressesByCity(@RequestParam String city) {
         return ResponseEntity.ok(addressService.getAddressesByCity(city));
     }
 
     @GetMapping("/zip")
-    public ResponseEntity<List<Address>> getAddressByZip(@RequestParam Integer zip) {
+    public ResponseEntity<List<Address>> getAddressesByZip(@RequestParam Integer zip) {
         return ResponseEntity.ok(addressService.getAddressesByZip(zip));
     }
 
@@ -55,7 +55,7 @@ public class AddressController {
     }
 
     @DeleteMapping
-    public void deleteAddressById(Integer id) {
+    public void deleteAddressById(@RequestParam Integer id) {
         addressService.deleteAddressById(id);
     }
 

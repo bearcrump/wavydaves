@@ -9,7 +9,7 @@ import com.wavydaves.api.models.CreditCard;
 import jakarta.transaction.Transactional;
 
 @Repository
-public interface CreditCardRepository extends JpaRepository<Integer, CreditCard> {
+public interface CreditCardRepository extends JpaRepository<CreditCard, Integer> {
     
     @Query("SELECT u FROM CreditCard u where u.id = ?1")
     Optional<CreditCard> getCreditCardById(Integer id);

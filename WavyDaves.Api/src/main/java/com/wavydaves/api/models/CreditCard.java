@@ -2,6 +2,7 @@ package com.wavydaves.api.models;
 
 import jakarta.persistence.*;
 import org.springframework.lang.Nullable;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import java.time.ZonedDateTime;
 
 @Entity
@@ -74,6 +75,7 @@ public class CreditCard {
         this.name = name;
     }
 
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSZ")
     @Column(name="expirationdate")
     public ZonedDateTime getExpirationDate() {
         return expirationDate;
