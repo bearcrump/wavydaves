@@ -11,7 +11,7 @@ public class CreditCard {
     private Integer addressId;
     @Nullable
     private Integer userId;
-    private Integer cardNumber;
+    private String cardNumber;
     private String name;
     private OffsetDateTime expirationDate;
 
@@ -19,7 +19,7 @@ public class CreditCard {
 
     }
 
-    public CreditCard(Integer id, Integer addressId, @Nullable Integer userId, Integer cardNumber, String name, OffsetDateTime expirationDate) {
+    public CreditCard(Integer id, Integer addressId, @Nullable Integer userId, String cardNumber, String name, OffsetDateTime expirationDate) {
         this.id = id;
         this.addressId = addressId;
         this.userId = userId;
@@ -57,11 +57,11 @@ public class CreditCard {
     }
 
     @Column(name="cardnumber")
-    public Integer getCardNumber() {
+    public String getCardNumber() {
         return cardNumber;
     }
 
-    public void setCardNumber(Integer cardNumber) {
+    public void setCardNumber(String cardNumber) {
         this.cardNumber = cardNumber;
     }
 

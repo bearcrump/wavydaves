@@ -2,6 +2,7 @@ package com.wavydaves.api.controllers;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import com.wavydaves.api.interfaces.ICreditCardService;
@@ -19,7 +20,7 @@ public class CreditCardController {
     }
 
     @PostMapping("auth")
-    public ResponseEntity<Boolean> authorizeCard(@RequestBody Integer cardNumber) {
+    public ResponseEntity<Boolean> authorizeCard(@RequestBody String cardNumber) {
         return ResponseEntity.ok(creditCardService.authorizeCard(cardNumber));
     }
 
@@ -45,5 +46,10 @@ public class CreditCardController {
 
     public void deleteCreditCardById(Integer id) {
         creditCardService.deleteCreditCardById(id);
+    }
+
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<String> handleException(Exception e) {
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("An error occurred: " + e.getMessage());
     }
 }

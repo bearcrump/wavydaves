@@ -17,7 +17,7 @@ public class CreditCardService implements ICreditCardService {
         this.creditCardRepository = creditCardRepository;
     }
 
-    public Boolean authorizeCard(Integer cardNumber) {
+    public Boolean authorizeCard(String cardNumber) {
         var result = creditCardRepository.getCreditCardByCardNumber(cardNumber);
         if (result.isPresent()) {
             return true;

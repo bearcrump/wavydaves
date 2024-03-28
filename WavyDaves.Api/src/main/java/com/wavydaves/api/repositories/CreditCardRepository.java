@@ -18,7 +18,7 @@ public interface CreditCardRepository extends JpaRepository<CreditCard, Integer>
     Optional<List<CreditCard>> getCreditCardsByUserId(Integer userId);
 
     @Query("SELECT u FROM CreditCard u where u.cardNumber = ?1")
-    Optional<List<CreditCard>> getCreditCardByCardNumber(Integer cardNumber);
+    Optional<CreditCard> getCreditCardByCardNumber(String cardNumber);
 
     @Transactional
     CreditCard save(CreditCard creditCard);
