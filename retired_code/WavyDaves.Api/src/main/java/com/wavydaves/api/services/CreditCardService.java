@@ -1,5 +1,6 @@
 package com.wavydaves.api.services;
 
+import java.util.Collections;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -40,7 +41,7 @@ public class CreditCardService implements ICreditCardService {
 
     public List<CreditCard> getCreditCardsByUserId(Integer userId) {
         var result = creditCardRepository.getCreditCardsByUserId(userId);
-        if (result.isPresent()) {
+        if (result.isPresent() && !result.get().equals(Collections.emptyList())) {
             return result.get();
         }
         else {
@@ -54,6 +55,6 @@ public class CreditCardService implements ICreditCardService {
     }
 
     public void deleteCreditCardById(Integer id) {
-        deleteCreditCardById(id);
+        creditCardRepository.deleteById(id);
     }
 }

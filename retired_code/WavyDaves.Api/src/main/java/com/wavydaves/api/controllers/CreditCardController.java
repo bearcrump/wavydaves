@@ -5,8 +5,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.HttpClientErrorException.NotFound;
+
 import com.wavydaves.api.interfaces.ICreditCardService;
 import com.wavydaves.api.models.CreditCard;
+import org.springframework.
 
 @RestController
 @RequestMapping("api/v1/credit_cards")
@@ -21,6 +24,8 @@ public class CreditCardController {
 
     @PostMapping("auth")
     public ResponseEntity<Boolean> authorizeCard(@RequestBody String cardNumber) {
+        boolean auth = creditCardService.authorizeCard(cardNumber);
+
         return ResponseEntity.ok(creditCardService.authorizeCard(cardNumber));
     }
 
@@ -47,9 +52,14 @@ public class CreditCardController {
     public void deleteCreditCardById(Integer id) {
         creditCardService.deleteCreditCardById(id);
     }
-
+    
     @ExceptionHandler(Exception.class)
     public ResponseEntity<String> handleException(Exception e) {
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("An error occurred: " + e.getMessage());
+    }
+
+    @ExceptionHandler(NotFound.class)
+    public ResponseEntity<String> handleResourceNotFound(NotFound e) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
     }
 }
