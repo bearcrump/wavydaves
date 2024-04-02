@@ -19,10 +19,10 @@ fi
 echo "The specified file is: $file"
 
 #docker exec -it wavydaves-postgres pg_restore -U WavyDaves -d WavyDaves "$file"
-docker cp "$file"  wavydaves-postgres:"$file"
-docker exec -it wavydaves-postgres psql -U WavyDaves -d WavyDaves < "$file"
+docker cp "$file"  wavydaves-postgres:"/$file"
+docker exec wavydaves-postgres psql -U WavyDaves -d WavyDaves < "$file"
 
 echo "removing .bak file from container"
-docker exec -it wavydaves-postgres rm "$file"
+docker exec  wavydaves-postgres rm "$file"
 
-echo "pg_restore on container using "$file" complete.
+echo "pg_restore on container using "$file" complete."
