@@ -6,5 +6,5 @@ Part of Go's compiler optimization removes all unused code / modules meaning I c
 
 * "net/http" - standard library http client
 * "database/sql" - standard library sql package
-* github.com/lib/pq - postgresql driver
+* "github.com/lib/pq" - postgresql driver
 
