@@ -18,11 +18,11 @@ fi
 # Now you can use the $file variable in your script
 echo "The specified file is: $file"
 
-#docker exec -it wavydaves-postgres pg_restore -U WavyDaves -d WavyDaves "$file"
+#docker exec -it wavydaves-postgres psql -U WavyDaves -d WavyDaves < "$file"
 docker cp "$file"  wavydaves-postgres:"/$file"
 docker exec wavydaves-postgres psql -U WavyDaves -d WavyDaves < "$file"
 
 echo "removing .bak file from container"
 docker exec  wavydaves-postgres rm "$file"
 
-echo "pg_restore on container using "$file" complete."
+echo "postgres restore using psql on container using "$file" complete."

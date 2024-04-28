@@ -10,7 +10,7 @@ backup_file="${current_date}.bak"
 docker exec wavydaves-postgres pg_dump -U WavyDaves -d WavyDaves -f "${backup_file}"
 
 # Copy the backup file to the same directory as the script
-docker cp wavydaves-postgres:"${backup_file}" "$(dirname "$(realpath "$0")")/Backups/${backup_file}"
+docker cp wavydaves-postgres:"${backup_file}" "$(dirname "$(realpath "$0")")/backups/${backup_file}"
 
 echo "Backup completed: ${backup_file}"
 echo "Cleaning backups from container..."
