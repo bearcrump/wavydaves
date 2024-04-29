@@ -1,9 +1,16 @@
 package com.wavydaves.api.models;
 
-import org.springframework.lang.Nullable;
 import java.time.OffsetDateTime;
 import java.util.List;
-import jakarta.persistence.*;
+
+import org.springframework.lang.Nullable;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name="orders")
@@ -15,7 +22,7 @@ public class Order {
     private Integer addressId;
     private String paymentType;
     private String name;
-    private OffsetDateTime orderTime;
+    private OffsetDateTime timestamp;
     private Integer totalDollars;
     private Integer totalCents;
     private Boolean isDelivery;
@@ -25,14 +32,14 @@ public class Order {
 
     }
 
-    public Order(Integer id, @Nullable Integer userId, @Nullable Integer addressId, String paymentType, String name, OffsetDateTime orderTime,
+    public Order(Integer id, @Nullable Integer userId, @Nullable Integer addressId, String paymentType, String name, OffsetDateTime timestamp,
                  Integer totalDollars, Integer totalCents, Boolean isDelivery, List<Item> orderItems) {
         this.id = id;
         this.userId = userId;
         this.addressId = addressId;
         this.paymentType = paymentType;
         this.name = name;
-        this.orderTime = orderTime;
+        this.timestamp = timestamp;
         this.totalDollars = totalDollars;
         this.totalCents = totalCents;
         this.isDelivery = isDelivery;
@@ -85,13 +92,13 @@ public class Order {
         this.name = name;
     }
 
-    @Column(name = "ordertime")
-    public OffsetDateTime getOrderTime() {
-        return orderTime;
+    @Column(name = "timestamp")
+    public OffsetDateTime getTimestamp() {
+        return timestamp;
     }
 
-    public void setOrderTime(OffsetDateTime orderTime) {
-        this.orderTime = orderTime;
+    public void setTimestamp(OffsetDateTime timestamp) {
+        this.timestamp = timestamp;
     }
 
     @Column(name = "totaldollars")
