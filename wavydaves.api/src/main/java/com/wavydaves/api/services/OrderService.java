@@ -1,6 +1,5 @@
 package com.wavydaves.api.services;
 
-import java.time.OffsetDateTime;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +15,7 @@ public class OrderService implements IOrderService {
     private final OrderRepository orderRepository;
 
     @Autowired
-   public OrderService(OrderRepository orderRepository) {
+    public OrderService(OrderRepository orderRepository) {
         this.orderRepository = orderRepository;
     }
 
@@ -64,16 +63,16 @@ public class OrderService implements IOrderService {
         return null;
     }
 
-    public Order getOrderByTimestamp(OffsetDateTime timestamp) {
-        var result = orderRepository.getOrderByTimestamp(timestamp);
-        if (result.isPresent()) {
-            return result.get();
-        }
-        else {
-            System.out.println("No orders with timestamp " + timestamp + "found.");
-        }     
-        return null;
-    }
+    // public Order getOrderByTimestamp(OffsetDateTime timestamp) {
+    //     var result = orderRepository.getOrderByTimestamp(timestamp);
+    //     if (result.isPresent()) {
+    //         return result.get();
+    //     }
+    //     else {
+    //         System.out.println("No orders with timestamp " + timestamp + "found.");
+    //     }     
+    //     return null;
+    // }
 
     public Order upsertOrder(Order order) {
         return orderRepository.save(order);
