@@ -3,6 +3,7 @@ package com.wavydaves.api.models;
 import java.time.OffsetDateTime;
 import java.util.List;
 
+import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.lang.Nullable;
 
 import jakarta.persistence.Column;
@@ -11,6 +12,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+
 
 @Entity
 @Table(name="orders")
@@ -93,6 +95,7 @@ public class Order {
     }
 
     @Column(name = "timestamp")
+    @UpdateTimestamp
     public OffsetDateTime getTimestamp() {
         return timestamp;
     }

@@ -1,6 +1,7 @@
 package com.wavydaves.api.services;
 
 import java.util.List;
+import java.time.OffsetDateTime;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -63,16 +64,16 @@ public class OrderService implements IOrderService {
         return null;
     }
 
-    // public Order getOrderByTimestamp(OffsetDateTime timestamp) {
-    //     var result = orderRepository.getOrderByTimestamp(timestamp);
-    //     if (result.isPresent()) {
-    //         return result.get();
-    //     }
-    //     else {
-    //         System.out.println("No orders with timestamp " + timestamp + "found.");
-    //     }     
-    //     return null;
-    // }
+    public Order getOrderByTimestamp(OffsetDateTime timestamp) {
+        var result = orderRepository.getOrderByTimestamp(timestamp);
+        if (result.isPresent()) {
+            return result.get();
+        }
+        else {
+            System.out.println("No orders with timestamp " + timestamp + "found.");
+        }     
+        return null;
+    }
 
     public Order upsertOrder(Order order) {
         return orderRepository.save(order);

@@ -1,6 +1,7 @@
 package com.wavydaves.api.controllers;
 
 import java.util.List;
+import java.time.OffsetDateTime;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -48,10 +49,10 @@ public class OrderController {
         return ResponseEntity.ok(orderService.getOrdersByName(name));
     }
 
-    // @GetMapping("timestamp")
-    // public ResponseEntity<Order> getOrderByTimestamp(@RequestParam OffsetDateTime timestamp) {
-    //     return ResponseEntity.ok(orderService.getOrderByTimestamp(timestamp));
-    // }
+    @GetMapping("timestamp")
+    public ResponseEntity<Order> getOrderByTimestamp(@RequestParam OffsetDateTime timestamp) {
+        return ResponseEntity.ok(orderService.getOrderByTimestamp(timestamp));
+    }
 
     @PostMapping
     public ResponseEntity<Order> upsertOrder(@RequestBody Order order) {
